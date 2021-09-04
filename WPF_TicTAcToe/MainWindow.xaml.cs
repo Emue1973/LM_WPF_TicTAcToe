@@ -24,5 +24,19 @@ namespace WPF_TicTAcToe
         {
             InitializeComponent();
         }
+        //Übung 02, Aufgabe 03
+        //die Farben des Button beim Anklicken einmalig invertieren
+        private void Btn_kaestchen_1_1_Click(object sender, RoutedEventArgs e)
+        {
+            //die aktuelle Farbeinstellungen sichern
+            //durch die Speicherung der Farbeinstellungen, kann die
+            //Invertierung wieder umgekehrt werde
+            Brush tempBackground = btn_kaestchen_1_1.Background;
+            Brush tempForeground = btn_kaestchen_1_1.Foreground;
+
+            //die Farben invertieren
+            btn_kaestchen_1_1.Background = tempForeground;
+            btn_kaestchen_1_1.Foreground = tempBackground;
+        }
     }
 }
